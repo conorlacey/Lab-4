@@ -8,7 +8,7 @@ output: github_document
 ### Load packages and data
 
 ```{r load-packages, message = FALSE}
-library(tidyverse) 
+suppressWarnings(library(tidyverse))
 library(dsbox) 
 ```
 
