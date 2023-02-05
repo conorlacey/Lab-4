@@ -1,12 +1,12 @@
 Lab 04 - La Quinta is Spanish for next to Denny’s, Pt. 1
 ================
-Insert your name here
-Insert date here
+Conor Lacey
+02-04-2023
 
 ### Load packages and data
 
 ``` r
-library(tidyverse) 
+suppressWarnings(library(tidyverse))
 library(dsbox) 
 ```
 
@@ -22,7 +22,7 @@ spaces in code chunk labels.
 
 ### Exercise 2
 
-Remove this text, and add your answer for Exercise 1 here. Add code
+Remove this text, and add your answer for Exercise 2 here. Add code
 chunks as needed. Don’t forget to label your code chunk. Do not use
 spaces in code chunk labels.
 
