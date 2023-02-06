@@ -134,22 +134,25 @@ lq <- lq %>%
 ### Exercise 9
 
 ``` r
-dn %>%
+dn<-dn %>%
+  count(state) %>%
+  inner_join(states, by = c("state" = "abbreviation"))
+
+lq<-lq %>%
   count(state) %>%
   inner_join(states, by = c("state" = "abbreviation"))
 ```
 
-    ## # A tibble: 51 × 4
-    ##    state     n name                     area
-    ##    <chr> <int> <chr>                   <dbl>
-    ##  1 AK        3 Alaska               665384. 
-    ##  2 AL        7 Alabama               52420. 
-    ##  3 AR        9 Arkansas              53179. 
-    ##  4 AZ       83 Arizona              113990. 
-    ##  5 CA      403 California           163695. 
-    ##  6 CO       29 Colorado             104094. 
-    ##  7 CT       12 Connecticut            5543. 
-    ##  8 DC        2 District of Columbia     68.3
-    ##  9 DE        1 Delaware               2489. 
-    ## 10 FL      140 Florida               65758. 
-    ## # … with 41 more rows
+California, Texas, and Florida have the most Denny’s locations while
+Delaware, DC, and Vermont have the fewest. I’m not super surpised by
+this considering California and Florida are popular vacation spots and
+Texas is a very large state. Delaware and DC are not as big and vermont
+is not a popular place to live. Denny’s I suspect would want to have
+locations where there are large masses of people.
+
+La Quinta locations follow the same trend with California, Texas, and
+Florida having the most. However, Texas has the most by far with 237
+locations! Maine and Vermont have the least locations. I’m not surprised
+by this given my previous reasoning.
+
+### Exercise 10

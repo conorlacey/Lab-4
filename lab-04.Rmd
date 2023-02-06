@@ -99,9 +99,22 @@ lq <- lq %>%
 ### Exercise 9 
 
 ```{r join-datasets}
-dn %>%
+dn<-dn %>%
+  count(state) %>%
+  inner_join(states, by = c("state" = "abbreviation"))
+
+lq<-lq %>%
   count(state) %>%
   inner_join(states, by = c("state" = "abbreviation"))
 ```
 
+California, Texas, and Florida have the most Denny's locations while Delaware, DC, and Vermont have the fewest. I'm not super surpised by this considering California and Florida are popular vacation spots and Texas is a very large state. Delaware and DC are not as big and vermont is not a popular place to live. Denny's I suspect would want to have locations where there are large masses of people. 
+
+La Quinta locations follow the same trend with California, Texas, and Florida having the most. However, Texas has the most by far with 237 locations! Maine and Vermont have the least locations. I'm not surprised by this given my previous reasoning. 
+
+### Exercise 10
+
+```{r}
+
+```
 
