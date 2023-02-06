@@ -96,4 +96,12 @@ lq <- lq %>%
   filter(country == "United States")
 ```
 
+### Exercise 9 
+
+```{r join-datasets}
+dn %>%
+  count(state) %>%
+  inner_join(states, by = c("state" = "abbreviation"))
+```
+
 
