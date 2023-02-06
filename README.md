@@ -1,3 +1,3 @@
-# lab-04-viz-sp-data
+# lab-04
 
-template materials for lab
+Completed lab 4 by Conor Lacey for DS4P
