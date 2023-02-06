@@ -100,6 +100,8 @@ dn %>%
     ## # … with 6 variables: address <chr>, city <chr>, state <chr>, zip <chr>,
     ## #   longitude <dbl>, latitude <dbl>
 
+It appears there are no dennys located outside the U.S. in this dataset.
+
 ### Exercise 6
 
 …
