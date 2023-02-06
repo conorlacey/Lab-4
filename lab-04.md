@@ -69,7 +69,7 @@ colnames(lq)
 
 Going to the La Quinta website there are La Quinta’s outside the U.S.
 that include Canada, Mexico, China, New Zealand, Turkey, United Arab
-Emirates, Chile, and Columbia.
+Emirates, Chile, and Colombia.
 
 Going to the Denny’s website it was actually difficult to find
 information on locations outside the U.S. Fortunately, statista.com
@@ -104,6 +104,29 @@ It appears there are no dennys located outside the U.S. in this dataset.
 
 ### Exercise 6
 
-…
+``` r
+dn<-dn %>%
+  mutate(country = "United States")
+```
 
-Add exercise headings as needed.
+### Exercise 7
+
+Fortunatley I took notes on this back in exercise 3. Going to the La
+Quinta website there are La Quinta’s outside the U.S. that include
+Canada, Mexico, China, New Zealand, Turkey, United Arab Emirates, Chile,
+and Colombia.
+
+### Exercise 8
+
+``` r
+lq<-lq %>%
+  mutate(country = case_when(
+    state %in% state.abb     ~ "United States",
+    state %in% c("ON", "BC") ~ "Canada",
+    state == "ANT"           ~ "Colombia",
+    state %in% c("CH","SL","AG","VE", "PU")  ~ "Mexico"
+  ))
+
+lq <- lq %>%
+  filter(country == "United States")
+```
