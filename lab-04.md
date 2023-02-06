@@ -39,6 +39,8 @@ colnames(dn)
 
     ## [1] "address"   "city"      "state"     "zip"       "longitude" "latitude"
 
+### Exercise 2
+
 Now let’s look at the La Quinta dataset.
 
 ``` r
@@ -62,12 +64,6 @@ colnames(lq)
 ```
 
     ## [1] "address"   "city"      "state"     "zip"       "longitude" "latitude"
-
-### Exercise 2
-
-Remove this text, and add your answer for Exercise 2 here. Add code
-chunks as needed. Don’t forget to label your code chunk. Do not use
-spaces in code chunk labels.
 
 ### Exercise 3
 

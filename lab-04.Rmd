@@ -31,6 +31,8 @@ colnames(dn)
 ```
 
 
+### Exercise 2
+
 Now let's look at the La Quinta dataset.
 
 ```{r laquinta-dataset}
@@ -44,14 +46,6 @@ The La Quinta dataset has 909 rows and 6 columns. Each row represents one La Qui
 ```{r laquinta-variables}
 colnames(lq)
 ```
-
-
-### Exercise 2
-
-Remove this text, and add your answer for Exercise 2 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
 
 ### Exercise 3
 
