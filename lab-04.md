@@ -231,3 +231,19 @@ dn_lq %>% filter(state == "NC") %>%
 Looks like Mitch Hedberg’s joke kinda holds in North Carolina. There are
 a few clusters with both Denny’s and La Quintas, however for the most
 part there are a lot of La Quintas with no Denny’s next to them!
+
+### Exercise 12
+
+``` r
+dn_lq %>% filter(state == "TX") %>%
+  ggplot(mapping = aes(x = longitude,
+                       y = latitude,
+                       color = establishment)) +
+  geom_point(alpha=0.5)+
+  labs(title = "Denny's and La Quinta Locations in Texas")
+```
+
+![](lab-04_files/figure-gfm/Texas-1.png)<!-- -->
+
+Looks like Mitch Hedberg’s joke holds in Texas! There are a lot of
+clusters with both Denny’s and La Quintas.
