@@ -61,7 +61,12 @@ I think one way to determine if a location is outside the U.S. for both datasets
 
 ### Exercise 5
 
+```{r denny-locations-outside-U.S.}
+dn %>%
+  filter(!(state %in% states$abbreviation))
+```
 
+It appears there are no dennys located outside the U.S. in this dataset.
 
 ### Exercise 6
 

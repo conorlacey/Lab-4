@@ -91,6 +91,15 @@ outside the U.S.
 
 ### Exercise 5
 
+``` r
+dn %>%
+  filter(!(state %in% states$abbreviation))
+```
+
+    ## # A tibble: 0 × 6
+    ## # … with 6 variables: address <chr>, city <chr>, state <chr>, zip <chr>,
+    ## #   longitude <dbl>, latitude <dbl>
+
 ### Exercise 6
 
 …
