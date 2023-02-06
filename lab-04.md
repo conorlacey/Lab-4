@@ -215,7 +215,7 @@ Florida, and Texas have the most locations. However, I am noticing now
 that there are a lot of Denny’s concentrated in the northeast while La
 Quintas are concentrated more in the south.
 
-\###Exercise 11
+### Exercise 11
 
 ``` r
 dn_lq %>% filter(state == "NC") %>%
@@ -228,5 +228,6 @@ dn_lq %>% filter(state == "NC") %>%
 
 ![](lab-04_files/figure-gfm/North-Carolina-1.png)<!-- -->
 
-Looks like Mitch Hedberg’s joke holds in North Carolina. There are a lot
-of La Quinta’s that are next to or near a Denny’s!
+Looks like Mitch Hedberg’s joke kinda holds in North Carolina. There are
+a few clusters with both Denny’s and La Quintas, however for the most
+part there are a lot of La Quintas with no Denny’s next to them!
