@@ -49,8 +49,12 @@ colnames(lq)
 
 ### Exercise 3
 
-...
+Going to the La Quinta website there are La Quinta's outside the U.S. that include Canada, Mexico, China, New Zealand, Turkey, United Arab Emirates, Chile, and Columbia. 
 
+Going to the Denny's website it was actually difficult to find information on locations outside the U.S. Fortunately, statista.com provides data on this if you follow this link: https://www.statista.com/statistics/947495/number-of-dennys-restaurants/
+  
+From this link we find that there are Denny's outside the U.S. that include Canada, Puerto Rico, Mexico, Phiippines, New Zealand, Honduras, United Arab Emirates, Guatemala, Costa Ric, Guam, Indonesia, El Salvador, United Kingdom, Aruba, Curacao N.V., and the Domincan Republic. 
+  
 ### Exercise 4
 
 ...
