@@ -134,14 +134,46 @@ lq <- lq %>%
 ### Exercise 9
 
 ``` r
-dn<-dn %>%
-  count(state) %>%
-  inner_join(states, by = c("state" = "abbreviation"))
-
-lq<-lq %>%
+dn %>%
   count(state) %>%
   inner_join(states, by = c("state" = "abbreviation"))
 ```
+
+    ## # A tibble: 51 × 4
+    ##    state     n name                     area
+    ##    <chr> <int> <chr>                   <dbl>
+    ##  1 AK        3 Alaska               665384. 
+    ##  2 AL        7 Alabama               52420. 
+    ##  3 AR        9 Arkansas              53179. 
+    ##  4 AZ       83 Arizona              113990. 
+    ##  5 CA      403 California           163695. 
+    ##  6 CO       29 Colorado             104094. 
+    ##  7 CT       12 Connecticut            5543. 
+    ##  8 DC        2 District of Columbia     68.3
+    ##  9 DE        1 Delaware               2489. 
+    ## 10 FL      140 Florida               65758. 
+    ## # … with 41 more rows
+
+``` r
+lq %>%
+  count(state) %>%
+  inner_join(states, by = c("state" = "abbreviation"))
+```
+
+    ## # A tibble: 48 × 4
+    ##    state     n name           area
+    ##    <chr> <int> <chr>         <dbl>
+    ##  1 AK        2 Alaska      665384.
+    ##  2 AL       16 Alabama      52420.
+    ##  3 AR       13 Arkansas     53179.
+    ##  4 AZ       18 Arizona     113990.
+    ##  5 CA       56 California  163695.
+    ##  6 CO       27 Colorado    104094.
+    ##  7 CT        6 Connecticut   5543.
+    ##  8 FL       74 Florida      65758.
+    ##  9 GA       41 Georgia      59425.
+    ## 10 IA        4 Iowa         56273.
+    ## # … with 38 more rows
 
 California, Texas, and Florida have the most Denny’s locations while
 Delaware, DC, and Vermont have the fewest. I’m not super surpised by
@@ -156,3 +188,45 @@ locations! Maine and Vermont have the least locations. I’m not surprised
 by this given my previous reasoning.
 
 ### Exercise 10
+
+``` r
+dn <- dn %>%
+  mutate(establishment = "Denny's")
+lq <- lq %>%
+  mutate(establishment = "La Quinta")
+```
+
+``` r
+dn_lq <- bind_rows(dn, lq)
+```
+
+``` r
+ggplot(dn_lq, mapping = aes(x = longitude,
+                            y = latitude,
+                            color = establishment)) +
+  geom_point(alpha=0.4)+
+  labs(title = "Denny's and La Quinta Locations in the U.S.")
+```
+
+![](lab-04_files/figure-gfm/plot-locations-1.png)<!-- -->
+
+The graph coincides with my answer to exercise 9. Clearly California,
+Florida, and Texas have the most locations. However, I am noticing now
+that there are a lot of Denny’s concentrated in the northeast while La
+Quintas are concentrated more in the south.
+
+\###Exercise 11
+
+``` r
+dn_lq %>% filter(state == "NC") %>%
+  ggplot(mapping = aes(x = longitude,
+                       y = latitude,
+                       color = establishment)) +
+  geom_point(alpha=0.6)+
+  labs(title = "Denny's and La Quinta Locations in NC")
+```
+
+![](lab-04_files/figure-gfm/North-Carolina-1.png)<!-- -->
+
+Looks like Mitch Hedberg’s joke holds in North Carolina. There are a lot
+of La Quinta’s that are next to or near a Denny’s!

@@ -99,11 +99,11 @@ lq <- lq %>%
 ### Exercise 9 
 
 ```{r join-datasets}
-dn<-dn %>%
+dn %>%
   count(state) %>%
   inner_join(states, by = c("state" = "abbreviation"))
 
-lq<-lq %>%
+lq %>%
   count(state) %>%
   inner_join(states, by = c("state" = "abbreviation"))
 ```
@@ -114,7 +114,39 @@ La Quinta locations follow the same trend with California, Texas, and Florida ha
 
 ### Exercise 10
 
-```{r}
+```{r identifier}
+dn <- dn %>%
+  mutate(establishment = "Denny's")
+lq <- lq %>%
+  mutate(establishment = "La Quinta")
+```
+
+```{r bind-rows}
+dn_lq <- bind_rows(dn, lq)
+```
+
+```{r plot-locations}
+ggplot(dn_lq, mapping = aes(x = longitude,
+                            y = latitude,
+                            color = establishment)) +
+  geom_point(alpha=0.4)+
+  labs(title = "Denny's and La Quinta Locations in the U.S.")
+```
+
+The graph coincides with my answer to exercise 9. Clearly California, Florida, and Texas have the most locations. However, I am noticing now that there are a lot of Denny's concentrated in the northeast while La Quintas are concentrated more in the south. 
+
+###Exercise 11
+
+```{r North-Carolina}
+
+dn_lq %>% filter(state == "NC") %>%
+  ggplot(mapping = aes(x = longitude,
+                       y = latitude,
+                       color = establishment)) +
+  geom_point(alpha=0.6)+
+  labs(title = "Denny's and La Quinta Locations in NC")
 
 ```
+
+Looks like Mitch Hedberg’s joke holds in North Carolina. There are a lot of La Quinta's that are next to or near a Denny's!
 
