@@ -84,11 +84,12 @@ Republic.
 
 ### Exercise 4
 
-…
+I think one way to determine if a location is outside the U.S. for both
+datasets is to see if the state abbreviations matches up with any of the
+abbreviations in the state dataset. If it does not, then it must be
+outside the U.S.
 
 ### Exercise 5
-
-…
 
 ### Exercise 6
 
