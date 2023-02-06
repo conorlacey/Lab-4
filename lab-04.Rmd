@@ -18,10 +18,33 @@ states <- read_csv("data/states.csv")
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r dennys-dataset, message = FALSE}
+dn<-dennys
+nrow(dn)
+ncol(dn)
+```
+
+In the dennys dataset, there are 1,643 row and 6 columns. Each row represents an individual dennys location. The variables in this data set include...
+
+```{r dennys-variables}
+colnames(dn)
+```
+
+
+Now let's look at the La Quinta dataset.
+
+```{r laquinta-dataset}
+lq<-laquinta
+nrow(lq)
+ncol(lq)
+```
+
+The La Quinta dataset has 909 rows and 6 columns. Each row represents one La Quinta location. The variables in the dataset are as follows: 
+
+```{r laquinta-variables}
+colnames(lq)
+```
+
 
 ### Exercise 2
 
